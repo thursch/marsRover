@@ -22,3 +22,13 @@ class MarsRover(object):
         else:
             self.xposition -= 1
 
+    def moveBackward(self):
+        if self.direction == "N":
+            self.yposition -= 1
+        elif self.direction == "E":
+            self.xposition -= 1
+        elif self.direction == "S":
+            self.yposition += 1
+        else:
+            self.xposition += 1
+

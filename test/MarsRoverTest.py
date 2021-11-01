@@ -64,6 +64,25 @@ class MarsRoverTest(unittest.TestCase):
         rover.moveForward()
         self.assertEqual(-1, rover.xposition)
 
+    def test_moves_backward_when_facing_north(self):
+        rover = MarsRover("N", 0, 0)
+        rover.moveBackward()
+        self.assertEqual(-1, rover.yposition)
+
+    def test_moves_backward_when_facing_east(self):
+        rover = MarsRover("E", 0, 0)
+        rover.moveBackward()
+        self.assertEqual(-1, rover.xposition)
+
+    def test_moves_backward_when_facing_south(self):
+        rover = MarsRover("S", 0, 0)
+        rover.moveBackward()
+        self.assertEqual(1, rover.yposition)
+
+    def test_moves_backward_when_facing_south(self):
+        rover = MarsRover("W", 0, 0)
+        rover.moveBackward()
+        self.assertEqual(1, rover.xposition)
 
 if __name__ == '__main__':
     unittest.main()
