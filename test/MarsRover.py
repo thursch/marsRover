@@ -8,11 +8,13 @@ class MarsRover(object):
         compassClockwise = ["N", "E", "S", "W"]
         self.direction = compassClockwise[(compassClockwise.index(self.direction) + 1) % 4]
 
-
     def turnLeft(self):
         compassAnticlockwise = ["N", "W", "S", "E"]
         self.direction = compassAnticlockwise[(compassAnticlockwise.index(self.direction) + 1) % 4]
 
     def moveForward(self):
         if self.direction == "N":
-            self.yposition = +1
+            self.yposition += 1
+        elif self.direction == "E":
+            self.xposition += 1
+
