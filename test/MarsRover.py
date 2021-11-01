@@ -17,4 +17,8 @@ class MarsRover(object):
             self.yposition += 1
         elif self.direction == "E":
             self.xposition += 1
+        elif self.direction == "S":
+            self.yposition -= 1
+        else:
+            self.xposition -= 1
 
