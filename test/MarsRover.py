@@ -1,8 +1,19 @@
 class MarsRover(object):
-    def __init__(self, direction, xposition, yposition):
+    def __init__(self, direction, xposition, yposition, instruction):
         self.direction = direction
         self.xposition = xposition
         self.yposition = yposition
+        self.instruction = instruction
+
+    def move(self):
+        if self.instruction == "L":
+            self.turnLeft()
+        elif self.instruction == "R":
+            self.turnRight()
+        elif self.instruction == "F":
+            self.moveBackward()
+        else:
+            self.moveBackward()
 
     def turnRight(self):
         compassClockwise = ["N", "E", "S", "W"]
