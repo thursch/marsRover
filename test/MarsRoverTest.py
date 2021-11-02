@@ -46,7 +46,7 @@ class MarsRoverTest(unittest.TestCase):
 
     def test_moves_forward_when_facing_north(self):
         rover = MarsRover("N",0,0,"F")
-        rover.move()
+        rover.moveForward()
         self.assertEqual(1, rover.yposition)
 
     def test_moves_forward_when_facing_east(self):
