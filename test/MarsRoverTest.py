@@ -41,12 +41,12 @@ class MarsRoverTest(unittest.TestCase):
 
     def test_rover_turns_left_from_west(self):
         rover = MarsRover("E", 0, 0,"L")
-        rover.turnLeft()
+        rover.move()
         self.assertEqual("N", rover.direction)
 
     def test_moves_forward_when_facing_north(self):
         rover = MarsRover("N",0,0,"F")
-        rover.moveForward()
+        rover.move()
         self.assertEqual(1, rover.yposition)
 
     def test_moves_forward_when_facing_east(self):
