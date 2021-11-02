@@ -11,7 +11,7 @@ class MarsRover(object):
         elif self.instruction == "R":
             self.turnRight()
         elif self.instruction == "F":
-            self.moveBackward()
+            self.moveForward()
         else:
             self.moveBackward()
 

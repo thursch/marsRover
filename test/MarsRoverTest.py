@@ -1,9 +1,10 @@
 import unittest
 
 from test.MarsRover import MarsRover
-
+from parameterized import parameterized
 
 class MarsRoverTest(unittest.TestCase):
+
     def test_rover_turns_right_from_north(self):
         rover = MarsRover("N", 0, 0, "R")
         rover.move()
@@ -46,42 +47,42 @@ class MarsRoverTest(unittest.TestCase):
 
     def test_moves_forward_when_facing_north(self):
         rover = MarsRover("N",0,0,"F")
-        rover.moveForward()
+        rover.move()
         self.assertEqual(1, rover.yposition)
 
     def test_moves_forward_when_facing_east(self):
         rover = MarsRover("E",0,0,"F")
-        rover.moveForward()
+        rover.move()
         self.assertEqual(1, rover.xposition)
 
     def test_moves_forward_when_facing_south(self):
         rover = MarsRover("S", 0, 0,"F")
-        rover.moveForward()
+        rover.move()
         self.assertEqual(-1, rover.yposition)
 
     def test_moves_forward_when_facing_west(self):
         rover = MarsRover("W", 0, 0,"F")
-        rover.moveForward()
+        rover.move()
         self.assertEqual(-1, rover.xposition)
 
     def test_moves_backward_when_facing_north(self):
         rover = MarsRover("N", 0, 0,"B")
-        rover.moveBackward()
+        rover.move()
         self.assertEqual(-1, rover.yposition)
 
     def test_moves_backward_when_facing_east(self):
         rover = MarsRover("E", 0, 0,"B")
-        rover.moveBackward()
+        rover.move()
         self.assertEqual(-1, rover.xposition)
 
     def test_moves_backward_when_facing_south(self):
         rover = MarsRover("S", 0, 0,"B")
-        rover.moveBackward()
+        rover.move()
         self.assertEqual(1, rover.yposition)
 
     def test_moves_backward_when_facing_south(self):
         rover = MarsRover("W", 0, 0,"B")
-        rover.moveBackward()
+        rover.move()
         self.assertEqual(1, rover.xposition)
 
 if __name__ == '__main__':
