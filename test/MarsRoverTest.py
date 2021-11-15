@@ -28,7 +28,7 @@ class MarsRoverTest(unittest.TestCase):
     def test_rover_turns_left_from_north(self):
         rover = MarsRover("N", 0, 0,"L")
         rover.move()
-        self.assertEqual("W", rover.direction)
+        self.assertEqual("W", rover.direction)  # add assertion here
 
     def test_rover_turns_left_from_west(self):
         rover = MarsRover("W", 0, 0,"L")
